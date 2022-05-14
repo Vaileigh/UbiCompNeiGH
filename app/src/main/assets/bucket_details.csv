@@ -1,0 +1,6 @@
+date time, bucket id,water level,water loss,reasons lost,water required, location
+2022-05-14 13:05:59,A0001,100,0,normal,0,NewSci
+2022-05-14 13:10:59,A0001,80,20,normal,20,NewSci
+2022-05-14 13:15:59,A0001,30,10,normal,70,NewSci
+2022-05-14 13:20:59,A0001,0,30,knocked,100,NewSci
+2022-05-14 13:25:59,A0001,100,0,filled,0,NewSci

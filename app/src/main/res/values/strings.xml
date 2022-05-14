@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NeiGH</string>
+    <string name="tab_text_1">Notification</string>
+    <string name="tab_text_2">Insight</string>
+</resources>
