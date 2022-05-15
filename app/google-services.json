@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "530624309831",
+    "project_id": "ubicompneigh",
+    "storage_bucket": "ubicompneigh.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530624309831:android:38bc88a9d83cd1e82adf62",
+        "android_client_info": {
+          "package_name": "com.example.ubicompneigh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "530624309831-1bq0874lmjrkgmcihd9emji11aaq9jhj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4HmClo6rpxRs8pKP1MEstm-ZqvLZFAKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "530624309831-1bq0874lmjrkgmcihd9emji11aaq9jhj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
