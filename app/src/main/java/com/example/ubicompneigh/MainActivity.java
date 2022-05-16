@@ -181,25 +181,27 @@ public class MainActivity extends AppCompatActivity {
                         arrayList.get(j).setWaterDrunk(waterDrunk);
                         arrayList.get(j).setWaterLvl(waterLvl);
                         arrayList.get(j).setWaterRequired(waterRequired);
-                        if (waterLvl <= 300){
-                            boolean notificationFound = false;
-                            for (int i = 0; i < notificationList.size(); i++ ){
-                                if (notificationList.get(i).getBucketID() == bucketID){
-                                    notificationFound = true;
-                                }
+                        boolean notificationFound = false;
+                        for (int i = 0; i < notificationList.size(); i++ ){
+                            if (notificationList.get(i).getBucketID() == bucketID){
+                                notificationFound = true;
                             }
+                        }
                             if (notificationFound){
+                                Log.d(TAG, "dataSnap: 192" + notificationList.size());
                                 for (int i = 0; i < notificationList.size(); i++) {
-                                    if (notificationList.get(i).getBucketID() == bucketID) {
-                                        if (dataSnapshot.child("waterLvl").getValue(Integer.class) <= 300) {
-                                            notificationList.get(i).setWaterLoss(dataSnapshot.child("waterLoss").getValue(Integer.class));
-                                            notificationList.get(i).setWaterDrunk(dataSnapshot.child("waterDrunk").getValue(Integer.class));
-                                            notificationList.get(i).setWaterLvl(dataSnapshot.child("waterLvl").getValue(Integer.class));
-                                            notificationList.get(i).setWaterRequired(dataSnapshot.child("waterRequired").getValue(Integer.class));
-                                        } else {
-                                            notificationList.remove(i);
+                                    if (waterLvl <= 300){
+                                        if (notificationList.get(i).getBucketID() == bucketID) {
+                                                notificationList.get(i).setWaterLoss(dataSnapshot.child("waterLoss").getValue(Integer.class));
+                                                notificationList.get(i).setWaterDrunk(dataSnapshot.child("waterDrunk").getValue(Integer.class));
+                                                notificationList.get(i).setWaterLvl(dataSnapshot.child("waterLvl").getValue(Integer.class));
+                                                notificationList.get(i).setWaterRequired(dataSnapshot.child("waterRequired").getValue(Integer.class));
                                         }
+                                    }else {
+                                        notificationList.remove(i);
+                                        Log.d(TAG, "dataSnap: 202" + notificationList.size());
                                     }
+
                                 }
 
                             }else{
@@ -207,7 +209,6 @@ public class MainActivity extends AppCompatActivity {
                                     notificationList.add(new Lists(bucketID,waterLvl,waterRequired,waterDrunk, waterLoss));
                                 }
                             }
-                        }
                     }
                     /*
                 if (notificationList.size() ==0){
