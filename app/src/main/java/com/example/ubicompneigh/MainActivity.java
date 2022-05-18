@@ -197,7 +197,7 @@ public class MainActivity extends AppCompatActivity {
                                                 notificationList.get(i).setWaterLvl(dataSnapshot.child("waterLvl").getValue(Integer.class));
                                                 notificationList.get(i).setWaterRequired(dataSnapshot.child("waterRequired").getValue(Integer.class));
                                         }
-                                    }else {
+                                    }else{
                                         notificationList.remove(i);
                                         Log.d(TAG, "dataSnap: 202" + notificationList.size());
                                     }
